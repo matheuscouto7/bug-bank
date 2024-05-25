@@ -16,13 +16,15 @@ describe('Cadastro de Usuario', () => {
 })
 
     it('Campo senha obrigatório', () => {
-        cadastros_page.preencheEmail()
+        const email  = faker.internet.email()
+        
+        cadastros_page.preencheEmail(email)
         cadastros_page.clicarCadastrar()
         cadastros_page.validarMesangemErroSenha('É campo obrigatório')
         
 })
 
-    it.only('Cadastro com sucesso', () => {
+    it('Cadastro com sucesso', () => {
 
         const name = faker.person.fullName()
         const senha = faker.internet.password()

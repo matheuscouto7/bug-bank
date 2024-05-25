@@ -15,7 +15,8 @@ export default {
     },
     validarMensagemSucesso() {
         cy.get('#modalText').should('be.visible')
-        cy.get('#btnCloseModal').click({force: true})
+        cy.screenshot()
+        cy.get('#btnCloseModal', { timeout: 5000 }).click({force: true})
 
     },
 
