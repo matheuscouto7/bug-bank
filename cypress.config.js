@@ -3,6 +3,12 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      charts: true,
+      reportTitle: 'Projeto do banco bug bank',
+      reportPageTitle: 'Projeto do banco bug bank'
+    },
+    reporter: 'cypress-mochawesome-reporter',
     baseUrl: "https://bugbank.netlify.app/",
     defaultCommandTimeout: 5000,
     setupNodeEvents(on, config) {
