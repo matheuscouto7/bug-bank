@@ -6,6 +6,11 @@ export default {
         cy.visit('/')
             .contains('O banco com bugs e falhas do seu jeito')
             cy.contains('button', 'Registrar').click() 
+    },
+
+    acessarLogin() {
+        cy.visit('/')
+        .contains('O banco com bugs e falhas do seu jeito')
     }
 
 }

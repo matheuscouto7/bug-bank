@@ -16,7 +16,12 @@ export default {
     validarMensagemSucesso() {
         cy.get('#modalText').should('be.visible')
         cy.get('#btnCloseModal').click({force: true})
+        
 
+    },
+    clicarDnv(){
+        cy.contains('Cadastrar').click({force: true})
+        cy.get('#btnCloseModal').click({force: true})
     },
 
     preencheEmail(email){
@@ -33,6 +38,9 @@ export default {
 
     confirmarSenha(senha) {
         cy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(senha, {force: true})
+    },
+    btnSaldo(){
+        cy.get('#toggleAddBalance').click({force: true})
     }
 
 
