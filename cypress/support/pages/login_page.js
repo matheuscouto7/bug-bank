@@ -11,5 +11,6 @@ export default {
         btnAcessar(){
             cy.get('.otUnI').click({force: true})
             cy.get('.home__Footer-sc-1auj767-16 > .home__Text-sc-1auj767-9').should('be.visible').should('have.text', 'Obrigado por escolher o nosso banco')
+        
         }
 }
